@@ -1,0 +1,1 @@
+COLORS = "MNHQ$OC?7>!:-;. "
