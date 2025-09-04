@@ -1,5 +1,5 @@
-import os, sys
-from PIL import Image
+from PIL import Image, PSDraw
+import os
 
 txt = open("text.txt", "w")
 
@@ -27,7 +27,11 @@ def convert_image_into_ascii_image(image):
     image = image.convert("L")
     width, height = image.size
 
+    ps_file = open("write.ps", "wb")
+    ps = PSDraw.PSDraw(ps_file)
+    ps.begin_document()
 
+    ps.setfont("Space Mono", font_size)
 
     for y in range(height):
         for x in range(width):
